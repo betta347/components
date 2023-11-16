@@ -55,4 +55,4 @@ export 'package:components/widgets/paginators/paginator.dart';
 export 'package:components/functions/storage/sh_preference.dart';
 
 // SMALL FUNCTIONS
-export 'package:components/functions/my_functions.dart';
+export 'package:components/functions/my_fire_functions.dart';

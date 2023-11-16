@@ -1,19 +1,19 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class StorageRepository {
-  static StorageRepository? _storageUtil;
+class MyStorageRepository {
+  static MyStorageRepository? _storageUtil;
   static SharedPreferences? _preferences;
 
-  static Future<StorageRepository> getInstance() async {
+  static Future<MyStorageRepository> getInstance() async {
     if (_storageUtil == null) {
-      final secureStorage = StorageRepository._();
+      final secureStorage = MyStorageRepository._();
       await secureStorage._init();
       _storageUtil = secureStorage;
     }
     return _storageUtil!;
   }
 
-  StorageRepository._();
+  MyStorageRepository._();
   Future _init() async {
     _preferences = await SharedPreferences.getInstance();
   }

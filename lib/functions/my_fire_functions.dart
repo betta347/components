@@ -1,6 +1,6 @@
 import 'package:components/constants/country_phone_codes.dart';
 
-mixin MyFunctions {
+mixin MyFireFunctions {
   static String makeWeekName(int weekday) {
     switch (weekday) {
       case 0:
