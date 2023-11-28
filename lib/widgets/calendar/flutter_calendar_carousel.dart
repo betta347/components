@@ -356,7 +356,10 @@ class _CalendarState<T extends EventInterface> extends State<CalendarCarousel<T>
                   }
                 : null,
           ),
-          const Divider(thickness: 1),
+          const Divider(
+            thickness: 1,
+            color: Color(0xFFF0F0F0),
+          ),
           WeekdayRow(
             firstDayOfWeek,
             widget.customWeekDayBuilder,
