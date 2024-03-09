@@ -1,5 +1,5 @@
 import 'dart:io' show Platform;
-import 'package:components/fire_components.dart';
+import 'package:components/widgets/buttons/w_scale_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:torch_light/torch_light.dart';

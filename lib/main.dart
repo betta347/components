@@ -1,4 +1,4 @@
-import 'package:components/fire_components.dart';
+import 'package:components/widgets/other_widgets/w_image_preloader.dart';
 import 'package:flutter/material.dart';
 
 void main() {
