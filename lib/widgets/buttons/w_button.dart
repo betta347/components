@@ -74,7 +74,7 @@ class WButton extends StatelessWidget {
             ? const Center(child: CupertinoActivityIndicator())
             : AnimatedDefaultTextStyle(
                 duration: const Duration(milliseconds: 200),
-                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     fontSize: 16,
                     fontWeight: isDisabled ? FontWeight.w700 : FontWeight.w600,
                     height: 1.36,

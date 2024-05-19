@@ -81,7 +81,7 @@ class PhoneTextField extends StatelessWidget {
                 ),
               ),
               hintText: hintText,
-              hintStyle: hintStyle ?? Theme.of(context).textTheme.headline3,
+              hintStyle: hintStyle ?? Theme.of(context).textTheme.headlineMedium,
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               fillColor: fillColor,
               filled: true,

@@ -43,12 +43,12 @@ class SearchField extends StatefulWidget {
     this.onClear,
     this.borderRadius = 10,
     this.fillColor = Colors.white,
-    Key? key,
+    super.key,
     this.hasBorder = true,
     this.focus = false,
     this.textStyle,
     this.height = 40,
-  }) : super(key: key);
+  });
 
   @override
   State<SearchField> createState() => _SearchFieldState();

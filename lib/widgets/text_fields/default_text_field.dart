@@ -78,7 +78,7 @@ class DefaultTextField extends StatelessWidget {
           Text(title,
               style: Theme.of(context)
                   .textTheme
-                  .headline1!
+                  .headlineSmall!
                   .copyWith(fontWeight: FontWeight.w600, fontSize: 14, color: Colors.black)),
           const SizedBox(height: 8),
         ],

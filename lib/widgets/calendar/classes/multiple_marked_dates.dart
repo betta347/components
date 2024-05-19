@@ -11,7 +11,7 @@ class MultipleMarkedDates {
   }
 
   void addRange(MarkedDate markedDate, {int plus = 0, int minus = 0}) {
-    this.add(markedDate);
+    add(markedDate);
 
     if (plus > 0) {
       int start = 1;
@@ -24,7 +24,7 @@ class MultipleMarkedDates {
           textStyle: markedDate.textStyle,
         );
 
-        this.add(newAddMarkedDate);
+        add(newAddMarkedDate);
 
         start += 1;
       }
@@ -41,7 +41,7 @@ class MultipleMarkedDates {
           textStyle: markedDate.textStyle,
         );
 
-        this.add(newSubMarkedDate);
+        add(newSubMarkedDate);
 
         start += 1;
       }

@@ -22,7 +22,7 @@ class PinField extends StatelessWidget {
   final TextStyle? textStyle;
 
   const PinField({
-    Key? key,
+    super.key,
     this.onChanged,
     this.selectedColor,
     this.textStyle,
@@ -41,7 +41,7 @@ class PinField extends StatelessWidget {
     required this.controller,
     required this.disabledColor,
     required this.length,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
