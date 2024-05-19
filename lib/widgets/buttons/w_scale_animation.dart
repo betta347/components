@@ -12,14 +12,13 @@ class WScaleAnimation extends StatefulWidget {
   const WScaleAnimation({
     required this.child,
     required this.onTap,
-    Key? key,
+    super.key,
     this.id = 1,
     this.isDisabled = false,
     this.duration = const Duration(milliseconds: 150),
     this.scaleValue = 0.95,
   })  : assert(scaleValue <= 1 && scaleValue >= 0,
-            'Range error: Range should be between [0,1]'),
-        super(key: key);
+            'Range error: Range should be between [0,1]');
 
   @override
   _WScaleAnimationState createState() => _WScaleAnimationState();

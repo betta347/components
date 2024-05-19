@@ -29,11 +29,11 @@ class GridPaginator extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.emptyWidget,
     this.loadingWidget,
-    Key? key,
+    super.key,
     required this.crossAxisCount,
     required this.crossAxisSpacing,
     required this.mainAxisSpacing,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

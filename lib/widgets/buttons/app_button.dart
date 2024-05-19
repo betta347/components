@@ -2,7 +2,7 @@ import 'package:components/widgets/buttons/w_scale_animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class WButton extends StatelessWidget {
+class AppButton extends StatelessWidget {
   final double? width;
   final double? height;
   final String text;
@@ -23,10 +23,10 @@ class WButton extends StatelessWidget {
   final Gradient? gradient;
   final Duration? duration;
 
-  const WButton({
+  const AppButton({
     required this.onTap,
     this.child,
-    this.text = '',
+    this.text = 'Click me',
     this.color = Colors.blue,
     this.textColor = Colors.white,
     this.borderRadius = 10,
@@ -43,8 +43,8 @@ class WButton extends StatelessWidget {
     this.scaleValue,
     this.shadow,
     this.gradient,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class WButton extends StatelessWidget {
             ? const Center(child: CupertinoActivityIndicator())
             : AnimatedDefaultTextStyle(
                 duration: const Duration(milliseconds: 200),
-                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     fontSize: 16,
                     fontWeight: isDisabled ? FontWeight.w700 : FontWeight.w600,
                     height: 1.36,

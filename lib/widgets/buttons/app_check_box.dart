@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class WCheckBox extends StatelessWidget {
+class AppCheckBox extends StatelessWidget {
   final bool isChecked;
   final Color checkBoxColor;
   final Color uncheckColor;
@@ -10,16 +10,16 @@ class WCheckBox extends StatelessWidget {
   final Color checkIconColor;
   final double size;
 
-  const WCheckBox({
+  const AppCheckBox({
     required this.isChecked,
-    required this.uncheckColor,
-    required this.uncheckBorderColor,
-    required this.checkBorderColor,
-    required this.checkIconColor,
+    this.uncheckColor = Colors.white,
+    this.uncheckBorderColor = Colors.grey,
+    this.checkBorderColor = Colors.blue,
+    this.checkIconColor = Colors.white,
     this.size = 20,
     this.checkBoxColor = Colors.blue,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) => AnimatedContainer(

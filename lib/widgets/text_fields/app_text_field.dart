@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class WTextField extends StatelessWidget {
+class AppTextField extends StatelessWidget {
   final TextEditingController controller;
   final ValueChanged<String> onChanged;
   final EdgeInsets contentPadding;
@@ -48,7 +48,7 @@ class WTextField extends StatelessWidget {
   final Color enabledBorderColor;
   final Color? hintColor;
 
-  const WTextField({
+  const AppTextField({
     this.autoFocus = false,
     this.hasSuffixIcon = false,
     this.showCount = false,
@@ -94,8 +94,8 @@ class WTextField extends StatelessWidget {
     this.focusColor = Colors.transparent,
     this.enabledBorder = Colors.white,
     this.minLines,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -109,6 +109,9 @@ class WTextField extends StatelessWidget {
         SizedBox(
           height: height,
           child: TextFormField(
+            onTapOutside: (_) {
+              focusNode?.unfocus();
+            },
             readOnly: readOnly,
             expands: expands ?? false,
             maxLengthEnforcement: maxLengthEnforcement,

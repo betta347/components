@@ -29,8 +29,8 @@ class Paginator extends StatelessWidget {
     this.loadingWidget,
     this.physics,
     this.hasItems,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

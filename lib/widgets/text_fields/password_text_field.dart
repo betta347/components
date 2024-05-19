@@ -24,8 +24,7 @@ class PasswordTextField extends StatefulWidget {
       this.title = '',
       this.hasError = false,
       this.prefixIcon = '',
-      Key? key})
-      : super(key: key);
+      super.key});
 
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();

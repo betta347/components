@@ -1,7 +1,7 @@
 import 'package:components/widgets/other_widgets/formatters.dart';
 import 'package:flutter/material.dart';
 
-class WMaskedTextField extends StatefulWidget {
+class AppMaskedTextField extends StatefulWidget {
   final TextEditingController controller;
   final TextStyle? style;
   final String mask;
@@ -15,11 +15,11 @@ class WMaskedTextField extends StatefulWidget {
   final VoidCallback? onEditingComplete;
   final bool? autoFocus;
 
-  const WMaskedTextField({
+  const AppMaskedTextField({
     this.autoFocus,
     required this.controller,
     this.style,
-    this.mask = 'xxxxxxxxxxxxxx',
+    this.mask = 'xxx xxx xxx xxx xx',
     this.escapeCharacter = 'x',
     this.maxLength = 100,
     this.keyboardType = TextInputType.text,
@@ -28,14 +28,14 @@ class WMaskedTextField extends StatefulWidget {
     this.focusNode,
     this.onChange,
     this.onEditingComplete,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
-  State<StatefulWidget> createState() => _WMaskedTextFieldState();
+  State<StatefulWidget> createState() => _AppMaskedTextFieldState();
 }
 
-class _WMaskedTextFieldState extends State<WMaskedTextField> {
+class _AppMaskedTextFieldState extends State<AppMaskedTextField> {
   int lastTextSize = 0;
 
   @override
@@ -69,10 +69,6 @@ class _WMaskedTextFieldState extends State<WMaskedTextField> {
                 widget.controller.text = '${widget.controller.text}${widget.mask[position]}';
               }
             }
-
-            // Android on change resets cursor position(cursor goes to 0)
-            // so you have to check if it reset, then put in the end(just on android)
-            // as IOS bugs if you simply put it in the end
             if (widget.controller.selection.start < widget.controller.text.length) {
               widget.controller.selection =
                   TextSelection.fromPosition(TextPosition(offset: widget.controller.text.length));

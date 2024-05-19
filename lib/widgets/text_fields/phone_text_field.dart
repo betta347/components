@@ -1,4 +1,4 @@
-import 'package:components/widgets/text_fields/masked_text_field.dart';
+import 'package:components/widgets/text_fields/app_masked_text_field.dart';
 import 'package:flutter/material.dart';
 
 class PhoneTextField extends StatelessWidget {
@@ -40,8 +40,7 @@ class PhoneTextField extends StatelessWidget {
       this.titleTextStyle,
       this.prefixIconColor,
       this.onChanged,
-      Key? key})
-      : super(key: key);
+      super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +59,7 @@ class PhoneTextField extends StatelessWidget {
         ],
         SizedBox(
           height: height ?? 40,
-          child: WMaskedTextField(
+          child: AppMaskedTextField(
             controller: controller,
             onChange: onChanged,
             mask: '## ### ## ##',
@@ -81,7 +80,7 @@ class PhoneTextField extends StatelessWidget {
                 ),
               ),
               hintText: hintText,
-              hintStyle: hintStyle ?? Theme.of(context).textTheme.headline3,
+              hintStyle: hintStyle ?? Theme.of(context).textTheme.headlineMedium,
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               fillColor: fillColor,
               filled: true,

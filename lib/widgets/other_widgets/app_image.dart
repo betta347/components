@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class WImage extends StatelessWidget {
+class AppImage extends StatelessWidget {
   final String imageUrl;
   final double? width;
   final double? height;
@@ -18,7 +18,7 @@ class WImage extends StatelessWidget {
   final BoxBorder? border;
   final Gradient? gradient;
 
-  const WImage({
+  const AppImage({
     this.imageUrl = "",
     this.padding,
     this.width,
@@ -34,8 +34,8 @@ class WImage extends StatelessWidget {
     required this.placeHolder,
     this.border,
     this.gradient,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

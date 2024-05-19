@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class WRadio<T> extends StatelessWidget {
+class AppRadio<T> extends StatelessWidget {
   final T value;
   final T groupValue;
   final ValueChanged<T> onChanged;
@@ -11,7 +11,7 @@ class WRadio<T> extends StatelessWidget {
   final double activeSize;
   final Color? centerColor;
 
-  const WRadio({
+  const AppRadio({
     required this.onChanged,
     required this.value,
     required this.groupValue,
@@ -21,8 +21,8 @@ class WRadio<T> extends StatelessWidget {
     this.activeSize = 13,
     this.backgroundColor = Colors.transparent,
     this.centerColor,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) => GestureDetector(

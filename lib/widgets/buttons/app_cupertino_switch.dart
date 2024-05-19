@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class WCupertinoSwitch extends StatefulWidget {
+class AppCupertinoSwitch extends StatefulWidget {
   final Color activeColor;
   final Color inactiveColor;
   final Color activeBorderColor;
@@ -17,7 +17,7 @@ class WCupertinoSwitch extends StatefulWidget {
   final int switchingDuration;
   final ValueChanged<bool> onChange;
 
-  const WCupertinoSwitch({
+  const AppCupertinoSwitch({
     required this.onChange,
     this.isSwitched = false,
     this.width = 46,
@@ -30,15 +30,14 @@ class WCupertinoSwitch extends StatefulWidget {
     this.animatedCircleActiveColor = Colors.white,
     this.animatedCircleInActiveColor = Colors.grey,
     this.switchingDuration = 150,
-    Key? key,
-  })  : assert(width - 5 >= height, '(Width - 5) cannot be less than height'),
-        super(key: key);
+    super.key,
+  })  : assert(width - 5 >= height, '(Width - 5) cannot be less than height');
 
   @override
-  State<WCupertinoSwitch> createState() => _WCupertinoSwitchState();
+  State<AppCupertinoSwitch> createState() => _AppCupertinoSwitchState();
 }
 
-class _WCupertinoSwitchState extends State<WCupertinoSwitch> {
+class _AppCupertinoSwitchState extends State<AppCupertinoSwitch> {
   bool isSwitched = false;
   bool isClicked = false;
 

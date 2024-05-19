@@ -9,15 +9,15 @@ class CustomCupertinoAlertDialog extends StatelessWidget {
   final bool hasRedText;
   final Function() rightAction;
 
-  const CustomCupertinoAlertDialog(
-      {Key? key,
-      required this.title,
-      this.description,
-      required this.leftActionText,
-      required this.rightActionText,
-      required this.rightAction,
-      this.hasRedText = false})
-      : super(key: key);
+  const CustomCupertinoAlertDialog({
+    super.key,
+    required this.title,
+    this.description,
+    required this.leftActionText,
+    required this.rightActionText,
+    required this.rightAction,
+    this.hasRedText = false,
+  });
 
   @override
   Widget build(BuildContext context) {

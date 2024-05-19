@@ -16,9 +16,8 @@ class HighlightedText extends StatelessWidget {
     this.wordDelimiters = ' .,;?!<>[]~`@#\$%^&*()+-=|/_',
     this.words = false,
     this.highlightColor,
-    Key? key,
-  })  : assert(highlightedText != null || terms != null),
-        super(key: key);
+    super.key,
+  })  : assert(highlightedText != null || terms != null);
   final bool caseSensitive;
   final TextOverflow overflow;
   final int? maxLines;
